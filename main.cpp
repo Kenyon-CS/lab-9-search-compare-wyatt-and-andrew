@@ -1,3 +1,7 @@
+//This program searches a random, sorted list using sequnential search, binary search, and an enhanced binary search
+//Written by Andrew Pilat and Wyatt Phillips
+//We attest that we contributed equally to this project
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -36,7 +40,7 @@ int bin_search(vector<int> &keys, int key, int &numCmp) {
     bool found =false;
     int last = keys.size()-1;
     int midpoint = (first+last)/2;
-while(first <= last && !found){
+while(first <= last && !found){ //While loop that iterates until the item is found or first <=last
     numCmp++;
     if( ((midpoint == 0) && key != keys[0]) ||  ((midpoint == keys.size()-1) && key != keys[keys.size()-1])){
         midpoint = -1;
